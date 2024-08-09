@@ -1,0 +1,676 @@
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+            <style>
+
+
+                
+
+            body{
+                font-family: "spline sans", sans-serif;
+                color: #777;
+                line-height: 1.7;
+            }
+
+            h1{
+                font-weight: 600;
+                color: aliceblue;
+            }
+
+            a{
+                color: #777;
+                text-decoration: none;
+                transition: all 0.4s;
+                font-weight: bolder;
+            }
+            a:hover{
+                color: rgb(80, 16, 152);
+            }
+            .img{
+                min-width: 100%;
+
+
+            }
+
+            .btn-brand{
+                color: aliceblue;
+                font-size: 14px;
+                padding: 8px 20px;
+                text-decoration: none;
+                background-color: rgb(80, 16, 152);
+                transition: 0.3s;
+            }
+            .btn-brand:hover{
+                background-color: aliceblue;
+            }
+            .navbar-toggler{
+                border: none;
+                font-size: 1.25rem;
+            }
+            .navbar-toggler:focus, btn-close:focus{
+                box-shadow: none;
+                outline: none;
+            }
+            .nav-link{
+                color: rgb(21, 15, 7);
+                font: 500;
+                padding: relative;
+            }
+            .nav-link:hover,.nav-link:active{
+                color: brown
+            }
+            .nav-link::before{
+                content: "";
+                position: absolute;
+                bottom: 0%;
+                left: 50%;
+                transform:translateX(-50%);
+                width: 0;
+                height: 2px;
+                background-color: burlywood;
+                visibility: hidden;
+                transition: 0.3s ease-in-out;
+            }
+            .nav-link:hover::before .nav-link:active::before{
+                width: 100%;
+                visibility: visible;
+            }
+            .c-item{
+                height: 480px;
+            }
+            .c-img{
+                height: 100%;
+                object-fit: cover;
+            }
+
+            /*Heandig part*/
+            .heading-container {
+                text-align: center;
+                color: rgb(80, 16, 152);
+                
+            }
+                .heading {
+                position: relative;
+                display: inline-block;
+                padding: 0 20px;
+                line-height: 1.5; /* Adjust line height as needed */
+                }
+
+                .heading::before,
+                .heading::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                width: 38vw;/* Set to 100% of the viewport width */
+                height: 1px;
+                background-color: dimgrey; /* Adjust line color as needed */
+                transform: translateY(-50%); /* Vertically center the lines */
+                }
+
+                .heading::before {
+                right: 50%;
+                margin-right: 170px; /* Adjust spacing as needed */
+                }
+
+                .heading::after {
+                left: 50%;
+                margin-left: 170px; /* Adjust spacing as needed */
+                }
+
+                .inner{
+                    overflow: hidden;
+                }
+                .inner img{
+                    transition: all 1.5s ease;
+                }
+                .inner:hover img{
+                    transform: scale(1.5);
+                }
+                .img1,.img2,.img3,.img4{
+                height: 180px;
+
+            }
+            .btn{
+                border: aliceblue;
+                font-size: 15px;
+                text-decoration: none;
+                background-color: rgb(80, 16, 152) ;
+            }
+            .btn:hover{
+                background-color: aliceblue;
+                color: #777;
+            }
+            .person{
+                background-image: url("Breezy_food/cover/cover_rew.avif");
+                height: auto;
+                width: auto;
+            }
+
+            .head-text{
+                font-size: 40px;
+                font-weight: 700;
+                color: rgb(80, 16, 152) ;
+            }
+            .customer_item{
+                padding: 30px 30px 30px 60px;
+                border-radius: 8px;
+                position: relative;
+            }
+            .customer_item .text_icon{
+                position: absolute;
+                top: 20px;
+                left: 30px;
+                width: 25px;
+            }
+
+                footer {
+                background: #101010;
+                padding: 86px 0;
+            }
+            .single-content {
+                text-align: center;
+                padding: 115px 0;
+            }
+            .single-box p {
+                color: #fff;
+                line-height: 1.9;
+            }
+            .single-box h3 {
+                font-size: 16px;
+                font-weight: 700;
+                color: #fff;
+            }
+            .single-box .card-area i {
+                color: #ffffff;
+                font-size: 20px;
+                margin-right: 10px;
+            }
+            .single-box ul {
+                list-style: none;
+                padding: 0;
+            }
+            .single-box ul li a {
+                text-decoration: none;
+                color: #fff;
+                line-height: 2.5;
+                font-weight: 100;
+            }
+            .single-box h2 {
+                color: #fff;
+                font-size: 20px;
+                font-weight: 700;
+            }
+            #basic-addon2 {
+                background: #fe1e4f;
+                color: #fff;
+            }
+            .socials i {
+                font-size: 18px;
+                margin-right: 15px;
+            }
+            @media (max-width: 767px) {
+                .single-box {
+                    margin-bottom: 50px;
+                }
+            }
+            @media (min-width: 768px) and (max-width: 991px) {
+                .single-box {
+                    margin-bottom: 50px;
+                }
+            }
+
+            </style>
+            </head>
+            <body>
+                
+                <div class="container mt-5">
+                    <div class="row gy-3">
+                    <div class="col-md-3">
+                        <div class="card shadow">
+                            <div class="inner">
+                            <img src="Breezy_food/cover/donut_plate.jpg" class="img1" alt="...">
+                        </div>
+                            <div class="card-body text-center">
+                            <h4 class="card-title">Sweet Duo Deal</h4>
+                            <p class="card-text">Get our Donut Family Pack! Buy yummy donuts, and enjoy a free Chocolate Donut Plate. It's a delightful way to treat yourself with extra sweetness.</p>
+                            <a href="#" class="btn btn-primary">Grab Now</a>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="col-md-3">
+                            <div class="card shadow">
+                                <div class="inner">
+                                <img src="Breezy_food/cover/pizza_offer.jpg" class="img2" alt="...">
+                                </div>
+                            <div class="card-body text-center">
+                                <h4 class="card-title">2 in 1 Pizza Offer</h4>
+                                <p class="card-text">Snag 2 large pizzas and 1 small veggie pizza, and we'll add in extra treats for free! A delectable deal, enhancing your pizza experience with delightful surprises. Enjoy the goodness!</p>
+                                <a href="#" class="btn btn-primary">Grab Now</a>
+                            </div>
+                        </div>
+                        </div>
+                    <div class="col-md-3">
+                        <div class="card shadow" >
+                        <div class="inner">
+                            <img src="Breezy_food/cover/maxresdefault.jpg" class="img3" alt="...">
+                        </div>
+                        <div class="card-body text-center">
+                            <h4 class="card-title">
+                                5 Buns + 3 Free Cupcake</h4>
+                            <p class="card-text">Snatch 5 tasty buns and we'll include 3 free cupcakes! A sweet deal to elevate your snack time, adding extra joy with delightful cupcakes. Enjoy this irresistible treat!</p>
+                            <a href="#" class="btn btn-primary">Grab Now</a>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card shadow">
+                        <div class="inner">
+                            <img src="Breezy_food/cover/chocolate_roll.jpg" class="img4" alt="...">
+                        </div>
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Bread + Sweet Roll Offer</h4>
+                            <p class="card-text">Buy 2 or more bread, get a free Breezy Bite chocolate roll. Enjoy the extra treat with your order—it's a sweet addition to make your meal even more delightful!</p>
+                            <a href="#" class="btn btn-primary">Grab Now</a>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+            <!--Our Team-->
+            <div class="container">
+                <div class="heading-container">
+                <h2 class="heading text-uppercase mt-5">Our Team Members</h2>
+                </div>
+            </div> 
+            
+            <!--card 3-->
+                <div class="container mt-5">
+                    <div class="row gy-3">
+
+                    <div class="col-md-3">
+                        <div class="card shadow">
+                        <div class="team-member shadow-on-hover text-center">
+                        <img src="Breezy_food/cover/nalin.png" class="img1" alt="...">
+                        </div>
+                        <div class="card-body text-center">
+                        <h4 class="card-title"> Chef Nalin</h4>
+                        <p class="card-text">Chef</p>
+                        </div>
+                </div>
+                </div>
+                    <div class="col-md-3">
+                        <div class="card shadow">
+                            <div class="team-member shadow-on-hover text-center">
+                            <img src="Breezy_food/cover/Soshan fdo.png" class="img2" alt="...">
+                            </div>
+                            <div class="card-body text-center">
+                            <h4 class="card-title">Chef Roshan Fenando</h4>
+                            <p class="card-text">Main Chef</p>
+                            </div>
+                    </div>
+                    </div>
+                    <div class="col-md-3">
+                    <div class="card shadow">
+                        <div class="team-member shadow-on-hover text-center">
+                            <img src="Breezy_food/cover/dumi.png" class="img3" alt="...">
+                        </div>
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Chef Duminda</h4>
+                            <p class="card-text">Chef</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card shadow">
+                        <div class="team-member shadow-on-hover text-center">
+                        <img src="Breezy_food/cover/Samantha.png" class="img4" alt="...">
+                        </div>
+                        <div class="card-body text-center">
+                        <h4 class="card-title">Chef Samantha</h4>
+                        <p class="card-text">Chef</p>
+                        </div>
+                    </div>
+                </div>  
+                </div>
+                </div>
+                <!--carocel-->
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <div class="container mt-5">
+                            <div class="row gy-3">
+                              <div class="col-md-3">
+                                <div class="card shadow">
+                                    <div class="team-member shadow-on-hover text-center">
+                                      <img src="Breezy_food/cover/nalin.png" class="img1" alt="...">
+                                    </div>
+                                    <div class="card-body text-center">
+                                      <h4 class="card-title"> Chef Nalin</h4>
+                                      <p class="card-text">Chef</p>
+                                    </div>
+                              </div>
+                            </div>
+                                <div class="col-md-3">
+                                    <div class="card shadow">
+                                        <div class="team-member shadow-on-hover text-center">
+                                          <img src="Breezy_food/cover/Soshan fdo.png" class="img2" alt="...">
+                                        </div>
+                                        <div class="card-body text-center">
+                                          <h4 class="card-title">Chef Roshan Fenando</h4>
+                                          <p class="card-text">Main Chef</p>
+                                        </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-3">
+                                  <div class="card shadow">
+                                      <div class="team-member shadow-on-hover text-center">
+                                        <img src="Breezy_food/cover/dumi.png" class="img3" alt="...">
+                                      </div>
+                                      <div class="card-body text-center">
+                                        <h4 class="card-title">Chef Duminda</h4>
+                                        <p class="card-text">Chef</p>
+                                      </div>
+                                </div>
+                              </div>
+                              <div class="col-md-3">
+                                <div class="card shadow">
+                                    <div class="team-member shadow-on-hover text-center">
+                                      <img src="Breezy_food/cover/Samantha.png" class="img4" alt="...">
+                                    </div>
+                                    <div class="card-body text-center">
+                                      <h4 class="card-title">Chef Samantha</h4>
+                                      <p class="card-text">Chef</p>
+                                    </div>
+                              </div>
+                              </div>
+                            </div>
+                            </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="container mt-5">
+                            <div class="row gy-3">
+                              <div class="col-md-3">
+                                <div class="card shadow">
+                                    <div class="team-member shadow-on-hover text-center">
+                                      <img src="Breezy_food/cover/nalin.png" class="img1" alt="...">
+                                    </div>
+                                    <div class="card-body text-center">
+                                      <h4 class="card-title"> Chef Nalin</h4>
+                                      <p class="card-text">Chef</p>
+                                    </div>
+                              </div>
+                            </div>
+                                <div class="col-md-3">
+                                    <div class="card shadow">
+                                        <div class="team-member shadow-on-hover text-center">
+                                          <img src="Breezy_food/cover/Soshan fdo.png" class="img2" alt="...">
+                                        </div>
+                                        <div class="card-body text-center">
+                                          <h4 class="card-title">Chef Roshan Fenando</h4>
+                                          <p class="card-text">Main Chef</p>
+                                        </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-3">
+                                  <div class="card shadow">
+                                      <div class="team-member shadow-on-hover text-center">
+                                        <img src="Breezy_food/cover/dumi.png" class="img3" alt="...">
+                                      </div>
+                                      <div class="card-body text-center">
+                                        <h4 class="card-title">Chef Duminda</h4>
+                                        <p class="card-text">Chef</p>
+                                      </div>
+                                </div>
+                              </div>
+                              <div class="col-md-3">
+                                <div class="card shadow">
+                                    <div class="team-member shadow-on-hover text-center">
+                                      <img src="Breezy_food/cover/Samantha.png" class="img4" alt="...">
+                                    </div>
+                                    <div class="card-body text-center">
+                                      <h4 class="card-title">Chef Samantha</h4>
+                                      <p class="card-text">Chef</p>
+                                    </div>
+                              </div>
+                              </div>
+                            </div>
+                            </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="..." class="d-block w-100" alt="...">
+                      </div>
+                    </div>
+                  </div>
+
+                    
+                <!--caro2-->
+                <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active" data-bs-interval="10000">
+                        <div class="container mt-5">
+                            <div class="row gy-3">
+                              <div class="col-md-3">
+                                <div class="card shadow">
+                                    <div class="team-member shadow-on-hover text-center">
+                                      <img src="Breezy_food/cover/nalin.png" class="img1" alt="...">
+                                    </div>
+                                    <div class="card-body text-center">
+                                      <h4 class="card-title"> Chef Nalin</h4>
+                                      <p class="card-text">Chef</p>
+                                    </div>
+                              </div>
+                            </div>
+                                <div class="col-md-3">
+                                    <div class="card shadow">
+                                        <div class="team-member shadow-on-hover text-center">
+                                          <img src="Breezy_food/cover/Soshan fdo.png" class="img2" alt="...">
+                                        </div>
+                                        <div class="card-body text-center">
+                                          <h4 class="card-title">Chef Roshan Fenando</h4>
+                                          <p class="card-text">Main Chef</p>
+                                        </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-3">
+                                  <div class="card shadow">
+                                      <div class="team-member shadow-on-hover text-center">
+                                        <img src="Breezy_food/cover/dumi.png" class="img3" alt="...">
+                                      </div>
+                                      <div class="card-body text-center">
+                                        <h4 class="card-title">Chef Duminda</h4>
+                                        <p class="card-text">Chef</p>
+                                      </div>
+                                </div>
+                              </div>
+                              <div class="col-md-3">
+                                <div class="card shadow">
+                                    <div class="team-member shadow-on-hover text-center">
+                                      <img src="Breezy_food/cover/Samantha.png" class="img4" alt="...">
+                                    </div>
+                                    <div class="card-body text-center">
+                                      <h4 class="card-title">Chef Samantha</h4>
+                                      <p class="card-text">Chef</p>
+                                    </div>
+                              </div>
+                              </div>
+                            </div>
+                            </div>   
+                    </div>
+                      <div class="carousel-item" data-bs-interval="2000">
+                        <div class="container mt-5">
+                            <div class="row gy-3">
+                              <div class="col-md-3">
+                                <div class="card shadow">
+                                    <div class="team-member shadow-on-hover text-center">
+                                      <img src="Breezy_food/cover/nalin.png" class="img1" alt="...">
+                                    </div>
+                                    <div class="card-body text-center">
+                                      <h4 class="card-title"> Chef Nalin</h4>
+                                      <p class="card-text">Chef</p>
+                                    </div>
+                              </div>
+                            </div>
+                                <div class="col-md-3">
+                                    <div class="card shadow">
+                                        <div class="team-member shadow-on-hover text-center">
+                                          <img src="Breezy_food/cover/Soshan fdo.png" class="img2" alt="...">
+                                        </div>
+                                        <div class="card-body text-center">
+                                          <h4 class="card-title">Chef Roshan Fenando</h4>
+                                          <p class="card-text">Main Chef</p>
+                                        </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-3">
+                                  <div class="card shadow">
+                                      <div class="team-member shadow-on-hover text-center">
+                                        <img src="Breezy_food/cover/dumi.png" class="img3" alt="...">
+                                      </div>
+                                      <div class="card-body text-center">
+                                        <h4 class="card-title">Chef Duminda</h4>
+                                        <p class="card-text">Chef</p>
+                                      </div>
+                                </div>
+                              </div>
+                              <div class="col-md-3">
+                                <div class="card shadow">
+                                    <div class="team-member shadow-on-hover text-center">
+                                      <img src="Breezy_food/cover/Samantha.png" class="img4" alt="...">
+                                    </div>
+                                    <div class="card-body text-center">
+                                      <h4 class="card-title">Chef Samantha</h4>
+                                      <p class="card-text">Chef</p>
+                                    </div>
+                              </div>
+                              </div>
+                            </div>
+                            </div>
+                    </div>
+                      <div class="carousel-item">
+                        <img src="..." class="d-block w-100" alt="...">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>  
+
+                  <div id="carouselExample" class="carousel slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                      </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active c-item">
+                        <img src="images/big_imag.jpg" class="d-block w-100 c-img" alt="slide 1">
+                        <div class="carousel-caption top-0 mt-4">
+                            <p class="mt-5 fs-3 text-uppercase">Make your Life Sweeter !</p>
+                            <h2 class="display-1 fw-bolder text-capitalize ">Breezy Bite Bakers</h2>
+                            <a href="bread&buns.html"><Button class="btn btn-primary px-4 py-2 fs-5 mt-5">Order Now</Button></a>
+                        </div>
+                      </div>
+                      <div class="carousel-item c-item">
+                        <img src="images/cake_slide.jpg" class="d-block w-100 c-img" alt="slide 2">
+                        <div class="carousel-caption top-0 mt-4">
+                            <p class="mt-5 fs-3 text-uppercase">Make your Life Sweeter !</p>
+                            <h2 class="display-1 fw-bolder text-capitalize">Breezy Bite Bakers</h2>
+                            <a target="_blank" href="cake.html"><Button class="btn btn-primary px-4 py-2 fs-5 mt-5">Order Now</Button></a>
+                        </div>
+                    </div>
+                      <div class="carousel-item c-item">
+                        <img src="images/lkkjnkjn.jpeg" class="d-block w-100 c-img" alt="slide 2">
+                        <div class="carousel-caption top-0 mt-4">
+                            <p class="mt-5 fs-3 text-uppercase">Make your Life Sweeter !</p>
+                            <h2 class="display-1 fw-bolder text-capitalize ">Breezy Bite Bakers</h2>
+                            <a target="_blank" href="pizza.html"><Button class="btn btn-primary px-4 py-2 fs-5 mt-5">Order Now</Button></a>
+                        </div>
+                        
+                    </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                    
+            
+            <footer>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="single-box">
+                                <img src="img/logo.png" alt="">
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam repellendus sunt praesentium aspernatur iure molestias.</p>
+                            <h3>We Accect</h3>
+                            <div class="card-area">
+                                    <i class="fa fa-cc-visa"></i>
+                                    <i class="fa fa-credit-card"></i>
+                                    <i class="fa fa-cc-mastercard"></i>
+                                    <i class="fa fa-cc-paypal"></i>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="single-box">
+                                <h2>Hosting</h2>
+                            <ul>
+                                <li><a href="#">Web Hosting</a></li>
+                                <li><a href="#">Cloud Hosting</a></li>
+                                <li><a href="#">CMS Hosting</a></li>
+                                <li><a href="#">WordPress Hosting</a></li>
+                                <li><a href="#">Email Hosting</a></li>
+                                <li><a href="#">VPS Hosting</a></li>
+                            </ul>
+                            </div>                    
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="single-box">
+                                <h2>Domain</h2>
+                            <ul>
+                                <li><a href="#">Web Domain</a></li>
+                                <li><a href="#">Cloud Domain</a></li>
+                                <li><a href="#">CMS Domain</a></li>
+                                <li><a href="#">WordPress Domain</a></li>
+                                <li><a href="#">Email Domain</a></li>
+                                <li><a href="#">VPS Domain</a></li>
+                            </ul>
+                            </div>                    
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="single-box">
+                                <h2>Newsletter</h2>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur doloremque earum similique fugiat nobis. Facere?</p>
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Enter your Email ..." aria-describedby="basic-addon2">
+                                    <span class="input-group-text" id="basic-addon2"><i class="fa fa-long-arrow-right"></i></span>
+                                </div>
+                                <h2>Follow us on</h2>
+                                <p class="socials">
+                                    <i class="fa fa-facebook"></i>
+                                    <i class="fa fa-dribbble"></i>
+                                    <i class="fa fa-pinterest"></i>
+                                    <i class="fa fa-twitter"></i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+
+            </body>
+            </html>

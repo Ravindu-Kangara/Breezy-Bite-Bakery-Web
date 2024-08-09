@@ -1,0 +1,254 @@
+
+body{
+    font-family: "spline sans", sans-serif;
+    color: #777;
+    line-height: 1.7;
+}
+
+h1{
+    font-weight: 600;
+    color: aliceblue;
+}
+
+a{
+    color: #777;
+    text-decoration: none;
+    transition: all 0.4s;
+    font-weight: bolder;
+}
+a:hover{
+    color: #501098;
+}
+.img{
+    min-width: 100%;
+}
+.offer{
+    height: 480px;
+}
+.btn-brand{
+    color: aliceblue;
+    font-size: 14px;
+    padding: 8px 20px;
+    text-decoration: none;
+    background-color: rgb(80, 16, 152);
+    transition: 0.3s;
+}
+.btn-brand:hover{
+    background-color: aliceblue;
+}
+.navbar-toggler{
+    border: none;
+    font-size: 1.25rem;
+}
+.navbar-toggler:focus, btn-close:focus{
+    box-shadow: none;
+    outline: none;
+}
+.nav-link{
+    color: rgb(21, 15, 7);
+    font: 500;
+    padding: relative;
+}
+.nav-link:hover,.nav-link:active{
+    color: rgb(80, 16, 152);
+}
+.nav-link::before{
+    content: "";
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform:translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: burlywood;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+}
+.nav-link:hover::before .nav-link:active::before{
+    width: 100%;
+    visibility: visible;
+}
+.c-item{
+    height: 480px;
+}
+.c-img{
+    height: 100%;
+    object-fit: cover;
+}
+@media screen and (max-width-500px) {
+    .carousel{
+        width: 100%;
+    }
+    .c-img{
+        width: 100%;
+    }
+    .location{
+        width: 100% !important;
+    }
+    .map-cont{
+        width: 100%;
+    }
+    .maps{
+        width: 100%;
+    }
+}
+
+.maps{
+    width: 100%;
+}
+
+
+/*Heandig part*/
+.heading-container {
+      text-align: center;
+      color: #501098;
+    }
+
+    .heading {
+      position: relative;
+      display: inline-block;
+      padding: 0 20px;
+      line-height: 1.5; /* Adjust line height as needed */
+    }
+
+
+
+    .heading::after {
+      left: 50%;
+      margin-left: 170px; /* Adjust spacing as needed */
+    }
+
+    .inner{
+        overflow: hidden;
+    }
+    .inner img{
+        transition: all 1.5s ease;
+    }
+    .inner:hover img{
+        transform: scale(1.5);
+    }
+    .img1,.img2,.img3,.img4{
+    height: 180px;
+
+}
+.btn{
+    border: aliceblue;
+    font-size: 15px;
+    text-decoration: none;
+    background-color: rgb(80, 16, 152) ;
+}
+.btn:hover{
+    background-color: aliceblue;
+    color: #777;
+}
+.person{
+    background-image: url("Breezy_food/cover/cover_rew.avif");
+    height: auto;
+    width: auto;
+}
+
+.head-text{
+    font-size: 40px;
+    font-weight: 700;
+    color: rgb(80, 16, 152) ;
+}
+.customer_item{
+    padding: 30px 30px 30px 60px;
+    border-radius: 8px;
+    position: relative;
+}
+.customer_item .text_icon{
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    width: 25px;
+}
+/* footer*/
+footer {
+	background: #101010;
+	padding: 86px 0;
+}
+.single-content {
+	text-align: center;
+	padding: 100px 0;
+    
+}
+.single-box p {
+	color: #fff;
+	line-height: 1.9;
+}
+.single-box h3 {
+	font-size: 16px;
+	font-weight: 700;
+	color: #fff;
+}
+.single-box .card-area i {
+	color: #ffffff;
+	font-size: 20px;
+	margin-right: 10px;
+}
+.single-box ul {
+	list-style: none;
+	padding: 0;
+}
+.single-box ul li a {
+	text-decoration: none;
+	color: #fff;
+	line-height: 2.5;
+	font-weight: 100;
+}
+.single-box h2 {
+	color: #fff;
+	font-size: 20px;
+	font-weight: 700;
+}
+#basic-addon2 {
+	background: #fe1e4f;
+	color: #fff;
+}
+.socials i {
+	font-size: 18px;
+	margin-right: 15px;
+}
+@media (max-width: 767px) {
+	.single-box {
+		margin-bottom: 50px;
+	}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	.single-box {
+		margin-bottom: 50px;
+	}
+}
+
+/*------------ Login container ------------*/
+.box-area{
+    width: 930px;
+}
+/*------------ Right box ------------*/
+.right-box{
+    padding: 40px 30px 40px 40px;
+}
+/*------------ Custom Placeholder ------------*/
+::placeholder{
+    font-size: 16px;
+}
+.rounded-4{
+    border-radius: 50px;
+}
+.rounded-5{
+    border-radius: 30px;
+}
+/*------------ For small screens------------*/
+@media only screen and (max-width: 768px){
+     .box-area{
+        margin: 0 10px;
+     }
+     .left-box{
+        height: 100px;
+        overflow: hidden;
+     }
+     .right-box{
+        padding: 20px;
+     }
+}
